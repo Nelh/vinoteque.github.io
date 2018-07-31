@@ -1,0 +1,88 @@
+
+ .main__filter-grid {
+   position: relative;
+   width: 100%;
+   height: auto;
+   padding:10px;
+   background-color: $gray;
+ }
+ .main__filter-grid .main__filter-cell {
+   float: left;
+   width: 16%;
+   padding: 7px;
+    position: relative;
+   .form-control__icon {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        .icon-arrow {
+            width: 15px;
+            height: 15px;
+            fill: $secondary-color;
+        }
+    }
+    .form-control__icon-search {
+        position: absolute;
+        top: 16px;
+        left: 13px;
+        cursor: text;
+        .icon-search {
+            width: 20px;
+            height: 20px;
+            fill: $secondary-color;
+        }
+    }
+    input {
+        padding-left: 28px;
+    }
+    ::placeholder {
+        font-size: 11px;
+        font-weight: 400;
+        color: $gray;
+    }
+   @include media-breakpoint-down(md) {  
+    width: 25%;
+   }
+   @include media-breakpoint-down(sm) {  
+    width: 50%;
+   }
+ }
+ .main__filter-grid .main__filter-search {
+    width: 26%;
+    @include media-breakpoint-down(md) { 
+        width: 100%;
+    }
+ }
+ .main__filter-grid .main__filter-btn {
+    width: 10%;
+    @include media-breakpoint-down(md) { 
+        width: 100%;
+    }
+ }
+ .main__filter-grid select {
+    font-weight: 300;
+    font-size: 12px;
+    color: $secondary-color;
+    font-family: $roboto;
+    line-height: 1.9;
+    border-radius:0;
+    border: 0; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: 0 0 1px 0.5px $light-gray;  
+    cursor: pointer;
+ }
+ .main__filter-grid .form-control {
+   font-weight: 300;
+   font-size: 12px;
+   color: $secondary-color;
+   font-family: $roboto;
+   line-height: 1.9;
+   border-radius:0;
+   border: 0; 
+   -webkit-border-radius: 2px;
+ }
+ .main__filter-grid .main__filter-clear {
+     clear:left;
+ }
+ 

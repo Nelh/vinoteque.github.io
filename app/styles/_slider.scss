@@ -1,0 +1,83 @@
+.main__slider {
+    display: flex;
+    font-family: $roboto;
+    font-weight: 300;
+    margin-top:10px;
+    @include media-breakpoint-down(md) {
+        display: block;
+     }
+    .main__slider-carousel {
+        flex: 2;
+        width: 100%;
+        height: 350px;
+        background: url("./../images/Banner_RareGems.jpg") no-repeat;
+        background-size:cover;
+        position: relative;
+        .main__slider-content-btn {
+            position: absolute;
+            top:110px;
+            right:40px;
+            @include media-breakpoint-down(sm) { 
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    .main__slider-cart {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        @include media-breakpoint-down(md) {
+            margin-left: 0;
+            margin-top: 10px;
+            flex-direction: row;
+         }
+
+        @include media-breakpoint-down(sm) { 
+            flex-direction: column;
+        }
+        .main__slider-cart-top {
+            background: url("./../images/block-1.jpg") no-repeat;
+            background-size:cover;
+            width: 100%;
+            height: 170px;
+            padding-top:34px;
+            margin-bottom: 5px;
+        }
+        .main__slider-cart-bottom {
+            background: url("./../images/block-2.jpg") no-repeat;
+            background-size:cover;
+            width: 100%;
+            height: 170px;
+            padding-top:34px;
+            margin-top: 5px;
+            @include media-breakpoint-down(md) { 
+                margin-top: 0;
+            }
+        }
+    }
+    .sub-heading-cart {
+        color: $light-gray;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .sub-heading-cart-btn {
+        text-align: center;
+        .click-here {
+            text-transform: uppercase;
+            background: transparent;
+            border: 1px solid $light-gray;
+            color: $light-gray;
+            font-size: 12px;
+            padding: 10px 20px;
+            &:hover {
+                background: $light-gray;
+                color:$black;
+                transition: all 0.5s ease-out;
+            }
+        }
+    }
+}

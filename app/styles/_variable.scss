@@ -1,0 +1,41 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+//importing fonts
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+
+//fonts variables
+$roboto : 'Roboto', sans-serif;
+
+// colors variables
+
+$secondary-color: #444;
+$light-black: rgba(0, 0, 0, 0.918);
+$light-gray: #eee;
+$black: #000;
+$gray:#cacaca;
+$dark-gray: #bfbfbf;
+$sub-heading-color:#ba9659;
+
+
+// buttons colors 
+.d-flex {flex:1;}
+.bg-dark {
+    background-color:$secondary-color!important;
+    color: $white!important;
+}
+.bg-Muddy-waters {
+    background-color:$sub-heading-color!important;
+    color: $white!important;
+    border:none!important;
+}
+.btn-light {background-color:$light-gray}
+button {
+    cursor: pointer;
+}

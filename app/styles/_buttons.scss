@@ -1,0 +1,108 @@
+.toggle-menu {
+  padding: 5px 0 0 0;
+  background: none;
+  border: 0;
+  color: $white;
+  cursor: pointer;
+  margin-top: 5px;
+  svg {
+    width: 30px;
+    rect {
+      fill: $white;
+      transition: all 0.2s;
+      &.first {
+        transform: rotate(0deg);
+        transform-origin: bottom right;
+      }
+      &.inbetween {
+        opacity: 1;
+      }
+      &.last {
+        transform: rotate(0deg);
+        transform-origin: top right;
+      }
+    }
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+.toggle-menu-rev {
+  svg {
+    rect.first {
+      transform: rotate(45deg);
+			width: 45px;
+    }
+    rect.last {
+      transform: rotate(-45deg);
+			width: 45px;
+    }
+    rect.inbetween {
+      opacity: 0;
+    }
+  }
+}
+//cart button
+.navbar__cart {
+    .st0{
+        fill:none;
+        stroke:#eee;
+        stroke-width:6;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-miterlimit:10;
+    }
+    .st1{
+        fill:#eee;
+    }
+      .manifest-dot {
+        animation: dot 1.35s infinite forwards;
+        transform-origin: 144.5px 83px;  
+      }
+      
+      .bubble-cart {
+        animation: skewCart 1.35s infinite;
+        transform-origin: center;
+      }
+      
+      @keyframes dot {
+        0%{
+          transform: translate(0%, 0%) scale(0);
+          opacity: 1;
+        }
+        25% {
+          transform: translate(0%, 0%) scale(1);
+          opacity: 1;
+        }
+        40% {
+          transform: translate(0%, 22%) scale(1);
+          opacity: 0.7;
+        }
+        90% {
+          transform: translate(0%, 22%) scale(1);
+          opacity: 0.7;
+        }
+        100% {
+          transform: translate(0%, 22%) scale(0);
+          opacity: 0.7;
+        }
+      }
+      
+      @keyframes skewCart {
+        35% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        75% {
+          transform: scale(.9);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      
+}
+
+
