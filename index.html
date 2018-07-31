@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce App</title>
+<link href="css/main.css" rel="stylesheet"></head>
+
+<body>
+    <div id="loading">
+        <img id="loading-image" src="images/logo.png">
+        <img id="loading-image" class="loading-animation" src="images/loader.gif" width="40" />
+    </div>
+    <div class="header">
+        <div class="navigation">
+            <div class="navigation__top">
+                <div class="container">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">New</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Trade</a>
+                        </li>
+                    </ul>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Need Help?</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- second navigation  -->
+            <div class="navigation__bottom">
+                <div class="container">
+                    <nav class="navbar navbar-toggleable-sm navbar-dark" data-toggle="sticky-onscroll">
+                        <div class="wrapper">
+                            <button class="toggle-menu toggle-menu navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <svg version="1.1" id="menuicn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 54 33" enable-background="new 0 0 54.238 33" xml:space="preserve">
+                                    <rect y="30" class="first" width="54.238" height="3" />
+                                    <rect x="10" y="20" class="inbetween" width="44.238" height="3" />
+                                    <rect x="20" y="10" class="inbetween" width="34.238" height="3" />
+                                    <rect width="54.238" class="last" height="3" />
+                                </svg>
+                            </button>
+                        </div>
+                        <a class="navbar-brand" href="#">
+                            <img src="images/vinoteque_logo.svg" width="175" alt="vinoteque">
+                        </a>
+                        <div class="navbar-collapse collapse justify-content-center" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">WINE</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">SPIRITS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">BRANDS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">PROMOTIONS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">CONTACT</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="navbar__cart">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <svg class="cart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><g><path fill="#000000" d="M79.966,63.285H29.506c-1.888,0-3.519-1.32-3.912-3.167l-7.722-36.271l-7.251-0.537   c-2.203-0.164-3.857-2.082-3.694-4.285c0.163-2.204,2.091-3.857,4.285-3.694l10.244,0.759c1.773,0.131,3.247,1.417,3.617,3.156   l7.673,36.039h43.991l5.771-26.794c0.464-2.16,2.6-3.537,4.752-3.068c2.16,0.465,3.533,2.593,3.068,4.752l-6.45,29.951   C83.479,61.97,81.851,63.285,79.966,63.285z"></path></g><circle fill="#000000" cx="38.232" cy="76.379" r="7.967"></circle><circle fill="#000000" cx="71.873" cy="76.379" r="7.967"></circle><g><path fill="#000000" class="item" id="content-top" d="M73.326,37.766H36.146c-2.209,0-4-1.791-4-4s1.791-4,4-4h37.181c2.209,0,4,1.791,4,4   S75.535,37.766,73.326,37.766z"></path></g><g><path class="item" id="content-bottom" fill="#000000" d="M70.671,50.406h-31.87c-2.209,0-4-1.791-4-4s1.791-4,4-4h31.87c2.209,0,4,1.791,4,4   S72.88,50.406,70.671,50.406z"></path></g></svg>
+                                        <div class="cart-badge">5</div>
+                                        <svg class="icon-arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                                            <path d="M0-.75h24v24H0z" fill="none" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main__filter">
+            <div class="main__filter-grid">
+                <div class="container">
+                    <div class="main__filter-cell main__filter-search">
+                        <span class="form-control__icon-search">
+                            <svg class="icon-search" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                                />
+                                <path d="M0 0h24v24H0z" fill="none" />
+                            </svg>
+                        </span>
+                        <input class="form-control" type="text" placeholder="Search for product, brands or category…">
+                    </div>
+                    <div class="main__filter-cell">
+                        <span class="form-control__icon">
+                            <svg class="icon-arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                                <path d="M0-.75h24v24H0z" fill="none" />
+                            </svg>
+                        </span>
+                        <select class="form-control">
+                            <option value="*">Brands</option>
+                            <option value="fav">Favorites</option>
+                        </select>
+                    </div>
+                    <div class="main__filter-cell">
+                        <span class="form-control__icon">
+                            <svg class="icon-arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                                <path d="M0-.75h24v24H0z" fill="none" />
+                            </svg>
+                        </span>
+                        <select class="form-control">
+                            <option value="*">Types/Cultivars</option>
+                            <option value="square">Square</option>
+                            <option value="circular">Circular</option>
+                        </select>
+                    </div>
+                    <div class="main__filter-cell">
+                        <span class="form-control__icon">
+                            <svg class="icon-arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                                <path d="M0-.75h24v24H0z" fill="none" />
+                            </svg>
+                        </span>
+                        <select class="form-control">
+                            <option>Packsizes</option>
+                        </select>
+                    </div>
+                    <div class="main__filter-cell">
+                        <span class="form-control__icon">
+                            <svg class="icon-arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                                <path d="M0-.75h24v24H0z" fill="none" />
+                            </svg>
+                        </span>
+                        <select class="form-control">
+                            <option>All Vintages</option>
+                        </select>
+                    </div>
+                    <div class="main__filter-cell main__filter-btn">
+                        <button class="btn form-control bg-dark waves-effect waves-ripple">SEARCH</button>
+                    </div>
+                    <div class="main__filter-clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="main">
+                <div class="main__slider">
+                    <div class="main__slider-carousel">
+                        <div class="main__slider-content-btn">
+                            <p class="sub-heading-cart">2017 award
+                                <br>veritas & michelangelo
+                                <br> award winners</p>
+                            <div class="sub-heading-cart-btn">
+                                <button class="btn click-here bg-Muddy-waters">browse now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__slider-cart">
+                        <div class="main__slider-cart-top">
+                            <p class="sub-heading-cart">Sign up to our
+                                <br> monthly newsletter</p>
+                            <div class="sub-heading-cart-btn">
+                                <button class="btn click-here">click here</button>
+                            </div>
+                        </div>
+                        <div class="main__slider-cart-bottom">
+                            <p class="sub-heading-cart">Mature your
+                                <br> wine with us</p>
+                            <div class="sub-heading-cart-btn">
+                                <button class="btn click-here">click here</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-title">
+                    <p class="heading-text">Award Winning</p>
+                    <div class="heading-line"></div>
+                </div>
+                <div class="main__items">
+                    <div class="main__items-block">
+                        <div class="label-trophy">
+                            <span>3</span>
+                            <img src="images/award.svg">
+                        </div>
+                        <div class="items__content">
+                            <img src="images/nederburg-two-centuries-cabernet-sauvignon-2014-nv-new_1024x1024.png" alt="" class="item__image">
+                        </div>
+                        <div class="items__sub-content">
+                            <p class="items__sub-content-text">ALTO</p>
+                            <span class="items__sub-content-text-sm">Rouge Red Blend 2015</span>
+                            <p class="items__sub-content-text">R85</p>
+                            <span class="items__sub-content-text-sm">R510 6 x 750ml</span>
+                        </div>
+                        <div class="items__footer">
+                            <div class="quantity">
+                                <input type="number" min="1" max="9" step="1" value="1">
+                            </div>
+                            <button class="btn add-item">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="main__items-block">
+                        <div class="label-trophy">
+                            <span>3</span>
+                            <img src="images/award.svg">
+                        </div>
+                        <div class="items__content">
+                            <img src="images/alto-rouge-2012-copy_be0ca5fa-323c-41d1-9f4c-8fa1764ee45f_1024x1024.png" alt="" class="item__image">
+                        </div>
+                        <div class="items__sub-content">
+                            <p class="items__sub-content-text">ALTO</p>
+                            <span class="items__sub-content-text-sm">Rouge Red Blend 2015</span>
+                            <p class="items__sub-content-text">R85</p>
+                            <span class="items__sub-content-text-sm">R510 6 x 750ml</span>
+                        </div>
+                        <div class="items__footer">
+                            <div class="quantity">
+                                <input type="number" min="1" max="9" step="1" value="1">
+                            </div>
+                            <button class="btn add-item">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="main__items-block">
+                        <div class="label-trophy">
+                            <span>2</span>
+                            <img src="images/award.svg">
+                        </div>
+                        <div class="items__content">
+                            <img src="images/durbaville-hills-the-tangram-white-blend-2016-nv-new_1024x1024.png" alt="" class="item__image">
+                        </div>
+                        <div class="items__sub-content">
+                            <p class="items__sub-content-text">ALTO</p>
+                            <span class="items__sub-content-text-sm">Rouge Red Blend 2015</span>
+                            <p class="items__sub-content-text">R85</p>
+                            <span class="items__sub-content-text-sm">R510 6 x 750ml</span>
+                        </div>
+                        <div class="items__footer">
+                            <div class="quantity">
+                                <input type="number" min="1" max="9" step="1" value="1">
+                            </div>
+                            <button class="btn add-item">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="main__items-block">
+                        <div class="label-trophy">
+                            <span>1</span>
+                            <img src="images/award.svg">
+                        </div>
+                        <div class="items__content">
+                            <img src="images/nederburg-hh-brew-master-bordeaux-2015-nv-new_903c46b1-8c74-4254-8516-e5836e26f314_1024x1024.png" alt="" class="item__image">
+                        </div>
+                        <div class="items__sub-content">
+                            <p class="items__sub-content-text">ALTO</p>
+                            <span class="items__sub-content-text-sm">Rouge Red Blend 2015</span>
+                            <p class="items__sub-content-text">R85</p>
+                            <span class="items__sub-content-text-sm">R510 6 x 750ml</span>
+                        </div>
+                        <div class="items__footer">
+                            <div class="quantity">
+                                <input type="number" min="1" max="9" step="1" value="1">
+                            </div>
+                            <button class="btn add-item">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="main__items-block">
+                        <div class="label-trophy">
+                            <span>1</span>
+                            <img src="images/award.svg">
+                        </div>
+                        <div class="items__content">
+                            <img src="images/nederburg-two-centuries-cabernet-sauvignon-2012_48bb5c80-db9f-4cc6-86f1-048f89439acc_1024x1024.png" alt="" class="item__image">
+                        </div>
+                        <div class="items__sub-content">
+                            <p class="items__sub-content-text">ALTO</p>
+                            <span class="items__sub-content-text-sm">Rouge Red Blend 2015</span>
+                            <p class="items__sub-content-text">R85</p>
+                            <span class="items__sub-content-text-sm">R510 6 x 750ml</span>
+                        </div>
+                        <div class="items__footer">
+                            <div class="quantity">
+                                <input type="number" min="1" max="9" step="1" value="1">
+                            </div>
+                            <button class="btn add-item">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="main__items-block">
+                        <div class="label-trophy">
+                            <span>3</span>
+                            <img src="images/award.svg">
+                        </div>
+                        <div class="items__content">
+                            <img src="images/desiderius-sparkling-wine-2008-copy_1024x1024.png" alt="" class="item__image">
+                        </div>
+                        <div class="items__sub-content">
+                            <p class="items__sub-content-text">ALTO</p>
+                            <span class="items__sub-content-text-sm">Rouge Red Blend 2015</span>
+                            <p class="items__sub-content-text">R85</p>
+                            <span class="items__sub-content-text-sm">R510 6 x 750ml</span>
+                        </div>
+                        <div class="items__footer">
+                            <div class="quantity">
+                                <input type="number" min="1" max="9" step="1" value="1">
+                            </div>
+                            <button class="btn add-item">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-title">
+                    <p class="heading-text">Best Sellers</p>
+                    <div class="heading-line"></div>
+                </div>
+                <div class="main__items">
+                    <div class="main__items-block">
+                        <div class="label-trophy">
+                            <span>3</span>
+                            <img src="images/award.svg">
+                        </div>
+                        <div class="items__content">
+                            <img src="images/desiderius-sparkling-wine-2008-copy_1024x1024.png" alt="" class="item__image">
+                        </div>
+                        <div class="items__sub-content">
+                            <p class="items__sub-content-text">ALTO</p>
+                            <span class="items__sub-content-text-sm">Rouge Red Blend 2015</span>
+                            <p class="items__sub-content-text">R85</p>
+                            <span class="items__sub-content-text-sm">R510 6 x 750ml</span>
+                        </div>
+                        <div class="items__footer">
+                            <div class="quantity">
+                                <input type="number" min="1" max="9" step="1" value="1">
+                            </div>
+                            <button class="btn add-item">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="main__items-block">
+                        <div class="label-trophy">
+                            <span>3</span>
+                            <img src="images/award.svg">
+                        </div>
+                        <div class="items__content">
+                            <img src="images/nederburg-hh-brew-master-bordeaux-2015-nv-new_903c46b1-8c74-4254-8516-e5836e26f314_1024x1024.png" alt="" class="item__image">
+                        </div>
+                        <div class="items__sub-content">
+                            <p class="items__sub-content-text">ALTO</p>
+                            <span class="items__sub-content-text-sm">Rouge Red Blend 2015</span>
+                            <p class="items__sub-content-text">R85</p>
+                            <span class="items__sub-content-text-sm">R510 6 x 750ml</span>
+                        </div>
+                        <div class="items__footer">
+                            <div class="quantity">
+                                <input type="number" min="1" max="9" step="1" value="1">
+                            </div>
+                            <button class="btn add-item">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="main__items-block">
+                        <div class="label-trophy">
+                            <span>3</span>
+                            <img src="images/award.svg">
+                        </div>
+                        <div class="items__content">
+                            <img src="images/nederburg-two-centuries-cabernet-sauvignon-2014-nv-new_1024x1024.png" alt="" class="item__image">
+                        </div>
+                        <div class="items__sub-content">
+                            <p class="items__sub-content-text">ALTO</p>
+                            <span class="items__sub-content-text-sm">Rouge Red Blend 2015</span>
+                            <p class="items__sub-content-text">R85</p>
+                            <span class="items__sub-content-text-sm">R510 6 x 750ml</span>
+                        </div>
+                        <div class="items__footer">
+                            <div class="quantity">
+                                <input type="number" min="1" max="9" step="1" value="1">
+                            </div>
+                            <button class="btn add-item">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="main__items-block">
+                        <div class="label-trophy">
+                            <span>3</span>
+                            <img src="images/award.svg">
+                        </div>
+                        <div class="items__content">
+                            <img src="images/durbaville-hills-the-tangram-white-blend-2016-nv-new_1024x1024.png" alt="" class="item__image">
+                        </div>
+                        <div class="items__sub-content">
+                            <p class="items__sub-content-text">ALTO</p>
+                            <span class="items__sub-content-text-sm">Rouge Red Blend 2015</span>
+                            <p class="items__sub-content-text">R85</p>
+                            <span class="items__sub-content-text-sm">R510 6 x 750ml</span>
+                        </div>
+                        <div class="items__footer">
+                            <div class="quantity">
+                                <input type="number" min="1" max="9" step="1" value="1">
+                            </div>
+                            <button class="btn add-item">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="main__items-block">
+                        <div class="label-trophy">
+                            <span>3</span>
+                            <img src="images/award.svg">
+                        </div>
+                        <div class="items__content">
+                            <img src="images/nederburg-two-centuries-cabernet-sauvignon-2012_48bb5c80-db9f-4cc6-86f1-048f89439acc_1024x1024.png" alt="" class="item__image">
+                        </div>
+                        <div class="items__sub-content">
+                            <p class="items__sub-content-text">ALTO</p>
+                            <span class="items__sub-content-text-sm">Rouge Red Blend 2015</span>
+                            <p class="items__sub-content-text">R85</p>
+                            <span class="items__sub-content-text-sm">R510 6 x 750ml</span>
+                        </div>
+                        <div class="items__footer">
+                            <div class="quantity">
+                                <input type="number" min="1" max="9" step="1" value="1">
+                            </div>
+                            <button class="btn add-item">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="main__items-block">
+                        <div class="label-trophy">
+                            <span>3</span>
+                            <img src="images/award.svg">
+                        </div>
+                        <div class="items__content">
+                            <img src="images/alto-rouge-2012-copy_be0ca5fa-323c-41d1-9f4c-8fa1764ee45f_1024x1024.png" alt="" class="item__image">
+                        </div>
+                        <div class="items__sub-content">
+                            <p class="items__sub-content-text">ALTO</p>
+                            <span class="items__sub-content-text-sm">Rouge Red Blend 2015</span>
+                            <p class="items__sub-content-text">R85</p>
+                            <span class="items__sub-content-text-sm">R510 6 x 750ml</span>
+                        </div>
+                        <div class="items__footer">
+                            <div class="quantity">
+                                <input type="number" min="1" max="9" step="1" value="1">
+                            </div>
+                            <button class="btn add-item">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__news">
+                    <div class="main__news-cart d-flex">
+                        <h1 class="main__news-cart-text">Latest<br><span>News</span></h1>
+                    </div>
+                    <div class="main__news-cart d-flex">
+                        <h1 class="main__news-cart-text">Latest<br><span>News</span></h1>
+                    </div>
+                    <div class="main__news-cart d-flex">
+                        <h1 class="main__news-cart-text">Latest<br><span>News</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main__footer">
+            <div class="container">
+                <div class="main__footer-column">
+                    <div class="main__column d-flex">
+                        <ul>
+                            <li>About Vinoteque</li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Winebank</a></li>
+                            <li><a href="#">Brands</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Promotions</a></li>
+                        </ul>
+                    </div>
+                    <div class="main__column d-flex">
+                        <ul>
+                            <li>Customer Service</li>
+                            <li><a href="#">Need help?</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Delivery policy</a></li>
+                            <li><a href="#">Trade sales</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="main__column d-flex">
+                        <ul>
+                            <li>My Account</li>
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="#">Forgot Password?</a></li>
+                            <li><a href="#">Create Account</a></li>
+                            <li><a href="#">Promotions</a></li>
+                        </ul>
+                    </div>
+                    <div class="main__column d-flex">
+                        <ul>
+                            <li>Newsletter</li>
+                            <input type="text" class="newsletter" placeholder="Sign up for our newsletter">
+                            <button class="btn btn-newsletter bg-Muddy-waters">SIGN UP</button>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer__block">
+                        <img src="images/icon.svg" class="footer__logo">
+                    </div>
+                    <div class="footer__block d-flex">
+                        <span class="copyright-text">Copyright Vinotaque 2016. All rights reserved. distell Terms & Condition | Enjoy Responsibly.
+                            Not for Sale to Persons Under the Age of 18
+                        </span>
+                    </div>
+                    <div class="footer__block">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="images/facebook-f-brands.svg" width="8px" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="images/twitter-brands.svg" width="13px" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="images/instagram-brands.svg" width="13px" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+<script type="text/javascript" src="js/bunble.min.js"></script></body>
+
+</html>
